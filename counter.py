@@ -1,4 +1,5 @@
 counts = []
+arrin = {}
 printed=0
 with open('model.txt') as f:
     for line in f:
@@ -7,13 +8,19 @@ with open('model.txt') as f:
         pre = line.split(';')[0]
         post = line.split(';')[1]
         n=0
-        for i in counts:
-            if i.startswith(line):
-                doesContainAlready = True
-                break
-            n+=1
+        #for i in counts:
+        #    if i.startswith(line):
+        #        doesContainAlready = True
+        #        break
+        #    n+=1 #good riddance (maybe)
+        try:
+            n = int(arrin.get(line))
+            doesContainAlready = True
+        except:
+            doesContainAlready = False
         if doesContainAlready == False:
             counts.append(line + ';1')
+            arrin[line] = len(counts) - 1
         elif doesContainAlready == True:
             try:
                 counts[n] = line + ';' + str(int(counts[n].split(';')[2]) + 1)

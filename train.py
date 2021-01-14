@@ -12,5 +12,6 @@ with open('training-dataset.txt') as f:
 print(model)
 with open('model.txt', 'w') as f:
     for i in model:
-        i = i.replace('\n', '\\n')
-        f.write(i + '\n')
+        if not '#&gt' in i:
+            i = i.replace('\n', '\\n')
+            f.write(i + '\n')
