@@ -11,11 +11,11 @@ for temp in range(howLong):
     with open('counts.txt') as f:
         for line in f:
             if line.startswith(letter):
-                possibles.append(line.replace('\n', ''))
+                possibles.append(line.replace('\\n', '').replace('\n', ''))
     print(possibles)
     for i in possibles:
         try:
-            if int(i.split(';')[2]) > amount and i != oldLetter and random.randrange(0,10) > 2:
+            if int(i.split(';')[2]) > amount and not i == oldLetter and random.randrange(0,10) > 2:
                 amount = int(i.split(';')[2])
                 oldLetter = i
                 nextletter = i.split(';')[1]
