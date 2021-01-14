@@ -31,5 +31,5 @@ with open('model.txt') as f:
 print(counts)
 with open('counts.txt', 'w') as f:
     for i in counts:
-        i = i.replace('\n', '\\n')
+        i = i.replace('\n', '')
         f.write(i + '\n')

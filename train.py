@@ -5,7 +5,7 @@ with open('training-dataset.txt') as f:
         n = 0
         for i in lines:
             try:
-                model.append(lines[n] + ';' + lines[n+1])
+                model.append(lines[n].replace(';', '') + ';' + lines[n+1].replace(';', ''))
             except:
                 pass
             n+=1
