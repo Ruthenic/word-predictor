@@ -1,1 +1,1 @@
-web: gunicorn docs/app.py:word-predictor
+web: gunicorn docs/app:word-predictor
