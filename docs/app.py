@@ -1,6 +1,9 @@
 from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
 import subprocess
+import importlib  
+produce = importlib.import_module("produce-web")
+
 app = Flask(__name__)
 result = 'ERROR: GENERATION FAILED. PLEASE REFRESH'
 @app.route("/")
@@ -10,7 +13,8 @@ def index():
 @app.route('/', methods=['POST'])
 def index_post():
     word = request.form['word']
-    subprocess.call('./produce.py ' + word, shell=True)
+    #subprocess.call('./produce.py ' + word, shell=True)
+    produce.generator.gen(word)
     with open('result.txt') as f:
         result = ''
         for line in f:
