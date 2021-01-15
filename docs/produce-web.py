@@ -4,7 +4,7 @@ import sys,random
 class generator():
     def gen(letter):
         letter = letter
-        howLong = 100
+        howLong = 50 #you win heroku
         oldLetter = ''
         full = []
         with open('result.txt', 'w') as f:
