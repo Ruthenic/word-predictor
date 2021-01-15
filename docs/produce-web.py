@@ -14,10 +14,16 @@ class generator():
             weights=[]
             possibles = []
             amount = 0
-            with open('counts.txt') as f:
-                for line in f:
-                    if line.startswith(letter):
-                        possibles.append(line.replace('\n', '').replace('\\n', ''))
+            try:
+                with open('counts.txt') as f:
+                    for line in f:
+                        if line.startswith(letter):
+                            possibles.append(line.replace('\n', '').replace('\\n', ''))
+            except:
+                with open('docs/counts.txt') as f:
+                    for line in f:
+                        if line.startswith(letter):
+                            possibles.append(line.replace('\n', '').replace('\\n', ''))
             print(possibles)
             #for i in possibles:
             #    try:
