@@ -3,7 +3,7 @@ import sys,random
 
 class generator():
     def gen(letter):
-        letter = letter
+        letter = letter.strip()
         howLong = 50 #you win heroku
         oldLetter = ''
         full = []
