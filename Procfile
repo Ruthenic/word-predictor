@@ -1,1 +1,1 @@
-web: gunicorn docs/app:word-predictor
+web: sh -c 'cd ./docs/ && gunicorn app:word-predictor'
