@@ -3,7 +3,7 @@ import sys,random
 
 class generator():
     def gen(letter,howLong):
-        letter = letter.strip().replace('\n', '')
+        letter = ''.join(e for e in letter if e.isalnum()).strip().replace('\n', '')
         oldLetter = ''
         full = []
         fullstr = letter + ' '
