@@ -2,8 +2,7 @@ from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
 import subprocess
 import importlib  
-produce = importlib.import_module("produce-web")
-
+import produce_api as produce
 app = Flask(__name__)
 result = 'ERROR: GENERATION FAILED. PLEASE REFRESH'
 @app.route("/")
