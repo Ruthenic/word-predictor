@@ -2,11 +2,11 @@
 import sys,random
 
 class generator():
-    def gen(letter):
-        letter = letter.strip()
-        howLong = 50 #you win heroku
+    def gen(letter,howLong):
+        letter = letter.strip().replace('\n', '')
         oldLetter = ''
         full = []
+        fullstr = letter + ' '
         with open('result.txt', 'w') as f:
             f.write(letter + ' ')
         letter= letter[len(letter) -1]
@@ -41,7 +41,9 @@ class generator():
                 nextletter = random.choice(full)
                 pass
             print(nextletter)
-            with open('result.txt', 'a') as f:
-                f.write(nextletter + ' ')
+            #with open('result.txt', 'a') as f:
+            #    f.write(nextletter + ' ')
+            fullstr += nextletter + ' '
             full.append(nextletter)
-            letter = nextletter
+            #letter = nextletter
+        return fullstr

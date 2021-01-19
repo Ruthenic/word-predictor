@@ -14,11 +14,11 @@ def index():
 def index_post():
     word = request.form['word']
     #subprocess.call('./produce.py ' + word, shell=True)
-    produce.generator.gen(word)
-    with open('result.txt') as f:
-        result = ''
-        for line in f:
-            result = result + '\n' + line
+    result = produce.generator.gen(word,50)
+    #with open('result.txt') as f:
+    #    result = ''
+    #    for line in f:
+    #        result = result + '\n' + line
     return result
     
 #@app.route("/result", methods=['POST'])
