@@ -9,7 +9,7 @@ result = 'ERROR: GENERATION FAILED. PLEASE REFRESH'
 def index():
     return render_template('input.html')
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['POST'])
 def index_post():
     word = request.form['word']
     #subprocess.call('./produce.py ' + word, shell=True)
