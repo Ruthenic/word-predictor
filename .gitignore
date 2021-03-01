@@ -4,5 +4,5 @@ training-dataset.txt
 result.txt
 out.txt
 bnccorpus.txt
-incremental/
-.fingerprint/
+/rust-version/produce-wp/target
+__pycache__

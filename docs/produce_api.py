@@ -1,6 +1,4 @@
-#!/usr/bin/python3
 import sys,random
-
 class generator():
     def gen(letter,howLong):
         letter = ''.join(e for e in letter if e.isalnum()).strip().replace('\n', '')
