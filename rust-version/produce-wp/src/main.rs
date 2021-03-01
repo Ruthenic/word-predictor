@@ -1,5 +1,6 @@
 use rand::prelude::*;
 use rand::distributions::WeightedIndex;
+use rand::distributions::Uniform;
 use std::io;
 use std::io::prelude::*;
 use std::fs::File;
@@ -44,12 +45,17 @@ fn main() {
 				weights.push(pair.split(";").collect::<Vec<&str>>()[2].parse::<i32>().ok().unwrap());
 	    	}
 	    }
-	    let dist = WeightedIndex::new(&weights).unwrap();
 	    let mut rng = thread_rng();
-	    prev_char = choices[dist.sample(&mut rng)].split(";").collect::<Vec<&str>>()[1].to_string();
+	    if weights.len() > 0 {
+	    	let dist = WeightedIndex::new(&weights).ok().unwrap();
+	    	prev_char = choices[dist.sample(&mut rng)].split(";").collect::<Vec<&str>>()[1].to_string();
+	    }
+		else {
+			prev_char = values.lines().collect::<Vec<&str>>()[rng.sample(Uniform::new(0, values.lines().collect::<Vec<&str>>().len()))].split(";").collect::<Vec<&str>>()[1].to_string();
+		}
 	    println!("{}", prev_char);
 		prev_char = prev_char.replace("\n", "");
-		prev_char = prev_char.replace("\\n", "");
+		prev_char = prev_char.replace("\\n", "\n");
 	    index+=1;
 	}
 }
