@@ -1,0 +1,11 @@
+/home/ruthenic/Coding/Python/word-predictor/rust-version/produce-wp/target/debug/deps/getrandom-589d4acfda742fd7.rmeta: /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/lib.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/error.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/util.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/error_impls.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/util_libc.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/use_file.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/linux_android.rs
+
+/home/ruthenic/Coding/Python/word-predictor/rust-version/produce-wp/target/debug/deps/getrandom-589d4acfda742fd7.d: /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/lib.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/error.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/util.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/error_impls.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/util_libc.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/use_file.rs /home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/linux_android.rs
+
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/lib.rs:
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/error.rs:
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/util.rs:
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/error_impls.rs:
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/util_libc.rs:
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/use_file.rs:
+/home/ruthenic/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.2/src/linux_android.rs:
