@@ -3,3 +3,5 @@ model.txt
 training-dataset.txt
 result.txt
 bnccorpus.txt
+incremental/
+.fingerprint/
