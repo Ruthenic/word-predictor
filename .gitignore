@@ -2,6 +2,7 @@ model.txt
 /counts.txt
 training-dataset.txt
 result.txt
+out.txt
 bnccorpus.txt
 incremental/
 .fingerprint/

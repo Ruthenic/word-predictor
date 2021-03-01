@@ -16,7 +16,7 @@ fn main() {
     let mut line = String::new();
     std::io::stdin().read_line(&mut line);
     line.pop();
-    let prev_char = line;
+    let mut prev_char = line;
     //println!("{}", prev_char);
     let mut index = 0;
 	let mut choices: Vec<String> = vec![];
@@ -35,7 +35,7 @@ fn main() {
 		}
     	choices = vec![];
     	let mut weights = vec![];
-    	let prev_char = format!("{};", &prev_char.replace(";", ""));
+    	prev_char = format!("{};", &prev_char.replace(";", ""));
 	    for pair in values.lines() {
 	    	pair.to_string();
 	    	//println!("{}\n{}", pair, prev_char);
@@ -46,8 +46,10 @@ fn main() {
 	    }
 	    let dist = WeightedIndex::new(&weights).unwrap();
 	    let mut rng = thread_rng();
-	    let prev_char: &str = &choices[dist.sample(&mut rng)].split(";").collect::<Vec<&str>>()[1];
+	    prev_char = choices[dist.sample(&mut rng)].split(";").collect::<Vec<&str>>()[1].to_string();
 	    println!("{}", prev_char);
+		prev_char = prev_char.replace("\n", "");
+		prev_char = prev_char.replace("\\n", "");
 	    index+=1;
 	}
 }
