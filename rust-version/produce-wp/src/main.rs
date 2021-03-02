@@ -23,13 +23,14 @@ fn main() {
 	let mut choices: Vec<String> = vec![];
 	let mut weights: Vec<i32> = vec![];
     let mut f = File::open("counts.txt").ok().unwrap();
+    //let mut f = File::open("counts.txt").expect("unable to find counts.txt");
     let mut file_string = String::new();
     f.read_to_string(&mut file_string);
     let values = file_string;
 	let mut file = std::fs::File::create("out.txt").expect("create failed");
 	loop {
 		println!("{}", prev_char);
-		file.write(prev_char.as_bytes());
+		file.write(prev_char.replace("\\n", "\n").as_bytes());
 		file.write(" ".as_bytes());
 		if index == num_of_chars {
 			break;
@@ -55,7 +56,6 @@ fn main() {
 		}
 	    println!("{}", prev_char);
 		prev_char = prev_char.replace("\n", "");
-		prev_char = prev_char.replace("\\n", "\n");
 	    index+=1;
 	}
 }
