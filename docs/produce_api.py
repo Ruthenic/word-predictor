@@ -43,5 +43,5 @@ class generator():
             #    f.write(nextletter + ' ')
             fullstr += nextletter + ' '
             full.append(nextletter)
-            #letter = nextletter
+            letter = nextletter
         return fullstr
