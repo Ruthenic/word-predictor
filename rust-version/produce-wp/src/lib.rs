@@ -4,6 +4,8 @@ use rand::prelude::*;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;
+
+#[no_mangle]
 pub fn gen(line: String, num_of_chars: i32, values: String) {
     //println!("{}", prev_char);
     let mut prev_char = line;
