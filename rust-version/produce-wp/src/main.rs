@@ -11,7 +11,7 @@ fn main(){
     //println!("{}", line);
     let mut num_of_chars = line.parse::<i32>().ok().unwrap();
     num_of_chars = num_of_chars - 1;
-    println!("What word would you like to start with? ");
+    println!("Which word would you like to start with? ");
     let mut line = String::new();
     std::io::stdin().read_line(&mut line);
     line.pop();

@@ -4,15 +4,17 @@ version = "0.1.0"
 authors = ["Ruthenic <mdrakea3@tutanota.com>"]
 edition = "2018"
 
-[features]
-js = []
+#[features]
+#js = []
 
 #[build]
 #rustflags = ["--link-arg=no-entry"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-[lib]
-crate-type = ["cdylib"]
+#[lib]
+#crate-type = ["cdylib"]
+
+
 
 [dependencies]
 rand = {version="0.8.3", features = ["alloc"]}
